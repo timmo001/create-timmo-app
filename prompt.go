@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/manifoldco/promptui"
+	"github.com/timmo001/create-timmo-app/create"
 )
 
 type promptItem struct {
@@ -71,9 +72,9 @@ func Prompt() {
 	fmt.Printf("  Name: %s\n", appName)
 
 	// Create the application
-	CreateApp(App{
-		appType,
-		appName,
+	create.CreateApp(create.App{
+		Type: appType,
+		Name: appName,
 	})
 }
 
